@@ -93,7 +93,7 @@
 	    });
 	}
 	
-///**
+/**
 	describe('Get Weather3', function() {
 
     	before(function() {
@@ -101,7 +101,7 @@
         });
 
     	it('with valid zip code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?zip=78613')
+    		rqst(app).get('/api/v1/getWeather3?zip=78613')
     		.end(function(err, res) {
                     assert.equal(res.status, 200);
                     assert.equal(res.body.city, 'Anderson Mill');
@@ -110,7 +110,7 @@
     	});
 
     	it('with without zip code', function(done) {
-    		rqst(app).get('/api/v1/getWeather')
+    		rqst(app).get('/api/v1/getWeather3')
     		.end(function(err, res) {
                     assert.equal(res.status, 400);
                     done();
@@ -118,7 +118,7 @@
     	});
 
     	it('with invalid zip code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?zip=00000')
+    		rqst(app).get('/api/v1/getWeather3?zip=00000')
     		.end(function(err, res) {
                     assert.equal(res.status, 200);
                     done();
@@ -126,13 +126,13 @@
     	});
 
     	it('with incomplete zip code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?zip=+++')
+    		rqst(app).get('/api/v1/getWeather3?zip=+++')
     		.end(function(err, res) {
                     assert.equal(res.status, 200);
                     done();
                 });
     	});
     });
-//*/
+*/
 	
 }());
