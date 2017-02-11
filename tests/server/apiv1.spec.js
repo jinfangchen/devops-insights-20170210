@@ -93,7 +93,7 @@
 	    });
 	}
 	
-/**
+///**
 	describe('Get Weather3', function() {
 
     	before(function() {
@@ -133,6 +133,6 @@
                 });
     	});
     });
-*/
+//*/
 	
 }());
